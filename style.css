@@ -28,15 +28,31 @@ header{
 }
 h1{
     font-size: 3rem;
+    font-weight: 600;
+    margin-top: 30px;
 }
 nav{
     text-align: center;
     justify-content: center;
     font-weight: 500;
-    font-size: 2;
+    font-size: 1;
+    margin-top: 10px;
+}
+nav a{
+    text-decoration: none;
+    color: #0c145c;
+    margin:0 2rem 1rem 0;
+}
+nav a:hover{
+text-decoration: underline;
+transform: scale(0.8);
+transition: transform 0.1s;
 }
 footer{
     background-color: var(--cor-secundaria);
     color: var(--cor-de-texto);
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 15px;
 
 }
