@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Yeseva+One&display=swap');
+:root{
+    --cor-de-fundo:#DFE2FE;
+    --cor-primaria:#003a77;
+    --cor-secundaria:#5454C5;
+    --cor-de-texto:#ffffff;
+    
+}
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-primaria);
+    font-family: "Yeseva One", serif;
+}
+header{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-de-texto);
+
+}
+footer{
+    background-color: var(--cor-secundaria);
+    color: var(--cor-de-texto);
+
+}
