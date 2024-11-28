@@ -1,3 +1,4 @@
+import { getCSS } from "./commom.js"
 async function quantidadedeUsuarios( ) {
     const url='https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'   
     const res = await fetch(url)
@@ -9,14 +10,44 @@ async function quantidadedeUsuarios( ) {
         {
           x: nomeDasRedes,
           y: quantidadeUsuarios,
-          type: 'bar'
+          type: 'bar',
+          marker:{
+            color:getCSS('--cor-de-barra')
+          }
         }
       ]
-
+      const layout = {
+        plot_bgcolor:getCSS('--cor-de-fundo'),
+        paper_bgcolor:getCSS('--cor-de-fundo'),
+        title: {
+          text: 'Redes sociais mais populares do mundo',
+          font:{
+            color:getCSS('--cor-de-barra'),
+            family: getCSS('--font'),
+            size: 25
+          }
+        },
+        xaxis:{
+          title:{
+            text:'Nome  da rede social',
+            font:{
+              color:getCSS(' --cor-secundaria')
+            }
+          }
+        },
+        yaxis:{
+          title:{
+            text:'Bilhões  de usuários ativos',
+            font:{
+              color:getCSS(' --cor-secundaria')
+            }
+          }
+        }
+      }
     const grafico = document.createElement ('div')
     grafico.className='grafico'
     document.getElementById('graficos-container').appendChild(grafico)
-    Plotly.newPlot(grafico, data)
+    Plotly.newPlot(grafico, data, layout)
 
 }
 

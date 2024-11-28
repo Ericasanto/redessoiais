@@ -4,7 +4,7 @@
     --cor-primaria:#003a77;
     --cor-secundaria:#5454C5;
     --cor-de-texto:#ffffff;
-    
+    --cor-de-barra:#1d3586;
 }
 * {
     margin: 0;
@@ -50,6 +50,9 @@ nav a:hover{
 }
 .graficos-container{
     margin: 5rem;
+}
+.grafico{
+    margin-top:  3rem;
 }
 .graficos-container__texto{
     font-size: 1.3rem;
